@@ -1,0 +1,33 @@
+<h1>Customers List</h1>
+    <div>
+        <table>
+            <tbody>
+            <tr>
+              <th>CustomerId</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Salary</th>
+              <th>Address</th>
+              <th>Qualification</th>
+              <th>IsMarried</th>
+              <th>Gender</th>
+              <th>Actions</th>
+            </tr>
+            <tr *ngFor="let customer of customers">
+              <td>{{customer.customerId}}</td>
+              <td>{{customer.name}}</td>
+              <td>{{customer.age}}</td>
+              <td>{{customer.sal}}</td>
+              <td>{{customer.address}}</td>
+              <td>{{customer.qualification}}</td>
+              <td>{{customer.isMarried}}</td>
+              <td>{{customer.gender}}</td>
+              <td style="display: flex">
+                <button type="button" class="btn btn-warning btn-sm" routerLink="/editCustomer/{{customer.customerId}}">Edit</button>
+                <button type="button" class="btn btn-danger btn-sm ml-1" (click)="delete(customer)">Delete</button>
+              </td>
+            </tr>
+         </tbody>
+        </table>
+    </div>
+  

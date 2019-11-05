@@ -1,0 +1,7 @@
+
+ng generate component customer-create --skipTests=true
+ng generate component customer-edit --skipTests=true
+ng generate component customer-list --skipTests=true
+
+http://localhost:4200/getAllCustomers
+http://localhost:4200/addCustomer

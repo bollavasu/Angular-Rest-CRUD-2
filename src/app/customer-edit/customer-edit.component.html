@@ -1,0 +1,43 @@
+<div class="container">
+
+    <h3>Create Customer</h3>
+    
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="data.name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="data.age" placeholder="Enter Age">
+        </div>
+        <div class="form-group">
+            <label for="sal">Salary</label>
+            <input type="text" class="form-control" id="sal" [(ngModel)]="data.sal" placeholder="Enter Salary">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" [(ngModel)]="data.address" placeholder="Enter Address"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="qualification">Qualification</label>
+            <select name="qualification" id="qualification" [(ngModel)]="data.qualification">
+                <option value="">Please Select</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="BTECH">BTECH</option>
+                <option value="MTECH">MTECH</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="isMarried">Is Married</label>
+            <input type="checkbox" id="isMarried" [(ngModel)]="data.isMarried">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            Male
+            <input type="radio" [(ngModel)]="data.gender" value="M"/>
+            Female
+            <input type="radio" [(ngModel)]="data.gender" value="F"/>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="submitCustomer()">Edit</button>
+</div>    
